@@ -1,0 +1,23 @@
+{
+  "status": "starting",
+  "url_payload": null,
+  "public_api_key": "sk-uc-75e73588d1de28ad40fbc97036654e88",
+  "api_key": "sk-uc-75e73588d1de28ad40fbc97036654e88",
+  "model": "یونیکالکت چت مینی",
+  "model_id": "unicollect-chat-mini",
+  "creator": "Muvixo",
+  "routes": {
+    "openai_base_url": null,
+    "chat_completions": null,
+    "v1_chat_completions": null,
+    "models": null,
+    "native_chat": null,
+    "native_stream": null,
+    "key": null,
+    "health": null
+  },
+  "updated_at": "2026-11-26T18:29:56+00:00",
+  "run_url": "https://github.com/TernuxPJ/ChatWebUIGoogleColab/actions/runs/45876375554",
+  "run_number": 1,
+  "commit": "1967ed0"
+}
