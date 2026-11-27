@@ -1,5 +1,5 @@
 {
-  "status": "starting",
+  "status": "offline",
   "url_payload": null,
   "public_api_key": "sk-uc-215833cf8e0a0049644bf038ee119640",
   "api_key": "sk-uc-215833cf8e0a0049644bf038ee119640",
@@ -16,7 +16,7 @@
     "key": null,
     "health": null
   },
-  "updated_at": "2026-11-27T19:59:41+00:00",
+  "updated_at": "2026-11-27T20:11:30+00:00",
   "run_url": "https://github.com/TernuxPJ/ChatWebUIGoogleColab/actions/runs/46060498355",
   "run_number": 7,
   "commit": "1967ed0"
