@@ -3,8 +3,8 @@
   "model": "یونیکالکت چت مینی",
   "model_id": "unicollect-chat-mini",
   "creator": "Muvixo",
-  "public_api_key": "sk-uc-49872fad8e187f016fe8787eb153044a",
-  "api_key": "sk-uc-49872fad8e187f016fe8787eb153044a",
+  "public_api_key": "sk-uc-2ed19ea430a08e83cb863e25c39958e0",
+  "api_key": "sk-uc-2ed19ea430a08e83cb863e25c39958e0",
   "status": "starting",
   "online": false,
   "base_url": null,
@@ -108,8 +108,8 @@
       "url": null
     }
   ],
-  "updated_at": "2026-11-28T02:12:21+00:00",
-  "run_url": "https://github.com/TernuxPJ/ChatWebUIGoogleColab/actions/runs/46096892527",
-  "run_number": 9,
+  "updated_at": "2026-11-28T10:38:06+00:00",
+  "run_url": "https://github.com/TernuxPJ/ChatWebUIGoogleColab/actions/runs/46136088781",
+  "run_number": 10,
   "commit": "1967ed0"
 }
