@@ -2,36 +2,34 @@
   <img src="docs/icon.png" alt="ChatWebUIGoogleColab Icon" width="96" height="96" />
 
   <h1>ChatWebUIGoogleColab</h1>
-  <p><strong>Google Colab Edition of Unicollect ChatWebUI · 5-Way 4B Router, Pro 14B (All GPUs), Coder Ultra (Unlocked), Mini/1.2 &amp; SDXL-Turbo Image Generation over <code>trycloudflare</code></strong></p>
+  <p><strong>Google Colab Edition of Unicollect ChatWebUI · Multi-Mode AI Chat, Smart Routing, Coding Assistant &amp; Real-Time Image Generation</strong></p>
 
   [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-  [![FastAPI](https://img.shields.io/badge/FastAPI-OpenAI%20Router-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-  [![Ollama](https://img.shields.io/badge/Ollama-5%20Models-111827?style=for-the-badge)](https://ollama.com/)
-  [![Diffusers](https://img.shields.io/badge/SDXL--Turbo-Image%20Gen-8B5CF6?style=for-the-badge)](https://huggingface.co/stabilityai/sdxl-turbo)
-  [![Google Colab](https://img.shields.io/badge/Google%20Colab-T4%20%7C%20L4%20%7C%20A100-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/)
+  [![FastAPI](https://img.shields.io/badge/FastAPI-OpenAI%20API-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+  [![Google Colab](https://img.shields.io/badge/Google%20Colab-GPU%20Ready-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/)
   [![License: MIT](https://img.shields.io/badge/License-MIT-3B82F6?style=for-the-badge)](./LICENSE)
 
   <br/>
 
-  [Model Suite](#model-suite) • [Highlights](#highlights) • [Run in Google Colab](#run-in-google-colab) • [API Routes](#api-routes) • [License](#license)
+  [Unicollect Suite](#unicollect-suite) • [Highlights](#highlights) • [Run in Google Colab](#run-in-google-colab) • [API Routes](#api-routes) • [License](#license)
 </div>
 
 ---
 
 <div align="center">
 
-## Model Suite
+## Unicollect Suite
 
 </div>
 
-| Panel Model | Backend Engine | GPU Compatibility | Role |
-| :--- | :--- | :--- | :--- |
-| **Unicollect Router 4B** | `qwen3:4b` | T4 / L4 / A100 | Fast 5-way hybrid router (`image`, `coder`, `science`, `math`, `chat`) & Persian→English image prompt translator |
-| **Unicollect Chat / Math Pro 14B** | `qwen3:14b` | T4 / L4 / A100 | High-intelligence, fast all-GPU chat & mathematical reasoning |
-| **Unicollect Chat / Mini** | `gpt-oss:20b` | T4 / L4 / A100 | Fast MoE general chat & bilingual EN/FA reasoning |
-| **Unicollect 1.2 (Math & Science)** | `lfm2.5:24b` | L4 / A100 *(offload on T4)* | Deep step-by-step math & scientific derivations |
-| **Unicollect Coder Ultra** | `qwen3-coder:30b` *(fallback `qwen3.6:35b-a3b`)* | L4 / A100 *(offload on T4)* | **Coding 100% unlocked** — full multi-file code, debugging & refactoring |
-| **Unicollect Imagine** | `stabilityai/sdxl-turbo` | T4 / L4 / A100 | Real-time 4-step GPU image generation with inline chat display & OpenAI-compatible API |
+| Mode | GPU Support | Best For |
+| :--- | :--- | :--- |
+| **Unicollect Auto** | T4 / L4 / A100 | Automatic smart routing across chat, math, science, coding, and image generation |
+| **Unicollect Pro** | T4 / L4 / A100 | High-accuracy everyday conversation, writing, and mathematical reasoning |
+| **Unicollect Mini** | T4 / L4 / A100 | Ultra-fast responses and bilingual Persian / English chat |
+| **Unicollect 1.2** | L4 / A100 *(T4 supported)* | Deep step-by-step math, physics, and scientific analysis |
+| **Unicollect Coder Ultra** | L4 / A100 *(T4 supported)* | Full multi-file software engineering, debugging, and refactoring |
+| **Unicollect Imagine** | T4 / L4 / A100 | Fast GPU image generation with automatic Persian-to-English prompt translation |
 
 ---
 
@@ -41,11 +39,11 @@
 
 </div>
 
-- **Smart 5-Way 4B Router (`qwen3:4b`):** Automatically detects and routes `image`, `coder`, `science`, `math`, and `chat` prompts in Persian and English.
-- **High Context & Token Limits:** Configured for `32,768` context window (`OLLAMA_NUM_CTX`), `32,768` max output tokens for **Unicollect Coder Ultra**, `16,384` max output tokens for general chat, `64,000`-character input limit, and `32` conversation turns.
-- **Coding Fully Unlocked for Coder Ultra:** Dedicated engineering system prompt with code-firewall bypass on SSE streaming and `/v1/chat/completions`, while preserving the no-code lock on standard chat models.
-- **Built-in Image Generation (`app/image_gen.py`):** Generates images on GPU via `stabilityai/sdxl-turbo` (no Hugging Face token needed), translates Persian prompts automatically, manages VRAM safely on T4/L4/A100, and renders images inline inside chat bubbles.
-- **Zero Redundant Downloads:** `colab/run_colab.py` checks Ollama storage on startup, skips models already on disk, and auto-downloads only missing models.
+- **Smart Automatic Routing:** Detects whether your prompt is general chat, math, science, software engineering, or image generation in Persian and English and dispatches it automatically.
+- **Long Context & High Output Limits:** Supports extended multi-turn conversations, long prompts, and large code outputs smoothly over SSE token streaming.
+- **Built-In Image Generation:** Generate images directly inside chat bubbles or through the REST API, with automatic Persian prompt translation and safe GPU memory management.
+- **OpenAI-Compatible API:** Ready-to-use `/v1/chat/completions`, `/v1/models`, and `/v1/images/generations` endpoints with an instant public HTTPS tunnel.
+- **Fast Startup:** Automatically checks local storage on launch and skips already-installed components.
 
 ---
 
@@ -55,7 +53,7 @@
 
 </div>
 
-1. Open [Google Colab](https://colab.research.google.com/) and choose **Runtime ➔ Change runtime type ➔ GPU (`T4`, `L4`, or `A100`)**.
+1. Open [Google Colab](https://colab.research.google.com/) and select **Runtime ➔ Change runtime type ➔ GPU (`T4`, `L4`, or `A100`)**.
 2. Run a single cell:
 
 ```bash
@@ -65,7 +63,7 @@
 !python3 -u colab/run_colab.py
 ```
 
-The launcher installs `zstd`, `pciutils`, Ollama, `diffusers`, and `cloudflared` if missing, downloads only missing models, launches FastAPI on `127.0.0.1:8000`, and prints your live `https://*.trycloudflare.com` URL, `/v1` OpenAI endpoint, `/api/image` route, and Public API Key.
+The launcher sets up the runtime automatically, starts the web panel and API server on `127.0.0.1:8000`, and prints your live public URL, `/v1` API endpoint, `/api/image` route, and Public API Key.
 
 ---
 
@@ -77,13 +75,13 @@ The launcher installs `zstd`, `pciutils`, Ollama, `diffusers`, and `cloudflared`
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
-| `GET` | `/` | Persian RTL-first Web Chat UI with full model switcher (`Pro 14B`, `Mini`, `1.2`, `Coder Ultra`, `Imagine`) |
-| `POST` | `/api/chat/stream` | SSE token-by-token streaming endpoint (supports text + inline image generation) |
-| `POST` | `/v1/chat/completions` | OpenAI-compatible chat completions router |
-| `GET` | `/v1/models` | List all available routed models |
+| `GET` | `/` | Bilingual RTL/LTR Web Chat UI with full Unicollect mode switcher |
+| `POST` | `/api/chat/stream` | Real-time SSE token-by-token streaming (text + inline image generation) |
+| `POST` | `/v1/chat/completions` | OpenAI-compatible chat completions endpoint |
+| `GET` | `/v1/models` | List all available Unicollect modes |
 | `POST` | `/api/image` | Direct JSON image generation endpoint |
 | `POST` | `/v1/images/generations` | OpenAI-compatible image generation endpoint (`url` or `b64_json`) |
-| `GET` | `/api/v1/key` · `/health` | Public API key bundle & live server/GPU status |
+| `GET` | `/api/v1/key` · `/health` | Public API key bundle &amp; live server status |
 
 ---
 
